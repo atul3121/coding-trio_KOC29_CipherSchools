@@ -1,0 +1,22 @@
+# using while loop to take n email address
+i=int(input("Enter the number of email address:"))
+a=1
+while a<=i:
+# Get user email address
+    email = input("Email: ").strip()
+
+# Slice out the user name
+    user_name = email[:email.index("@")]
+
+# Slice the domain name
+    domain_name = email[email.index("@")+1:]
+
+#Adding uppercase to domain name
+    domain_name=domain_name.upper()
+
+# Format message
+    output = "username: {}   and   domain:{}".format(user_name,domain_name)
+
+# Display output message
+    print(output)
+    a=a+1
